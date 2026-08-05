@@ -1,0 +1,13 @@
+---
+description: InEngine Calendar Google Adapter (Calendar adapter) conventions
+globs: "**/*"
+alwaysApply: true
+---
+
+# inengine/calendar-google-adapter (Calendar adapter)
+
+- Informal name: **Calendar adapter** — same as this module/repo (`InEngine/Calender-Google-Adapter`; folder/repo spelling **Calender**).
+- PHP `^8.5`; depends on **`inengine/calendar`**.
+- Implement Google Calendar as a **provider** for the base Calendar contracts. Keep LTC Blade/widgets in the host app.
+- Path/repo folder is **`Calender-Google-Adapter`** (GitHub spelling); Composer name is **`inengine/calendar-google-adapter`**.
+- Read **`.cursor/SESSION_HANDOFF.md`** at the start of substantive work (includes the two-package idea sketch).

@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton;
+namespace InEngine\CalendarGoogleAdapter;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use VendorName\Skeleton\Commands\SkeletonCommand;
+use InEngine\CalendarGoogleAdapter\Commands\CalendarGoogleAdapterCommand;
 
-class SkeletonServiceProvider extends PackageServiceProvider
+class CalendarGoogleAdapterServiceProvider extends PackageServiceProvider
 {
     public function configurePackage(Package $package): void
     {
@@ -16,10 +16,10 @@ class SkeletonServiceProvider extends PackageServiceProvider
          * More info: https://github.com/spatie/laravel-package-tools
          */
         $package
-            ->name('skeleton')
+            ->name('calendar-google-adapter')
             ->hasConfigFile()
             ->hasViews()
-            ->hasMigration('create_migration_table_name_table')
-            ->hasCommand(SkeletonCommand::class);
+            ->hasMigration('create_calendar_google_adapter_table')
+            ->hasCommand(CalendarGoogleAdapterCommand::class);
     }
 }
