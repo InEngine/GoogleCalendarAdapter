@@ -2,9 +2,9 @@
 
 namespace InEngine\CalendarGoogleAdapter;
 
+use InEngine\CalendarGoogleAdapter\Commands\CalendarGoogleAdapterCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use InEngine\CalendarGoogleAdapter\Commands\CalendarGoogleAdapterCommand;
 
 class CalendarGoogleAdapterServiceProvider extends PackageServiceProvider
 {

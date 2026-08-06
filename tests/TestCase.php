@@ -3,8 +3,8 @@
 namespace InEngine\CalendarGoogleAdapter\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Orchestra\Testbench\TestCase as Orchestra;
 use InEngine\CalendarGoogleAdapter\CalendarGoogleAdapterServiceProvider;
+use Orchestra\Testbench\TestCase as Orchestra;
 
 class TestCase extends Orchestra
 {
