@@ -5,7 +5,7 @@ alwaysApply: true
 
 # GitHub issue assignee
 
-When creating issues with **`gh issue create`** for this repository (**`InEngine/Calender-Google-Adapter`** (often called the **Calendar adapter**)) or related InEngine / LTC repos the user names, **always** include:
+When creating issues with **`gh issue create`** for this repository (**`InEngine/Calendar-Google-Adapter`** (often called the **Calendar adapter**)) or related InEngine / LTC repos the user names, **always** include:
 
 ```bash
 --assignee excellentingenuity

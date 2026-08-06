@@ -2,7 +2,7 @@
 
 Use this file so new chats pick up **recent package work**, **branch focus**, and **next steps**. Add newest sessions **at the top** (below `<!-- SESSION_LOG_START -->`). Do not store secrets.
 
-**Repo:** https://github.com/InEngine/Calender-Google-Adapter — Composer **`inengine/calendar-google-adapter`**. Path checkout: `InEngine/Modules/Calender-Google-Adapter` (**Calender** spelling matches GitHub). Depends on **`inengine/calendar`**.
+**Repo:** https://github.com/InEngine/Calendar-Google-Adapter — Composer **`inengine/calendar-google-adapter`**. Path checkout: `InEngine/Modules/Calendar-Google-Adapter`. Depends on **`inengine/calendar`**.
 
 **Alias:** Often referred to as the **Calendar adapter** (module/repo). Same thing as this package.
 
@@ -38,6 +38,13 @@ Issue **#143** (LTC home widgets) is two problems: an **app-facing calendar doma
 
 <!-- SESSION_LOG_START -->
 
+### 2026-08-05 — Renamed Calender → Calendar (repo + directory)
+
+- **GitHub:** **`InEngine/Calender-Google-Adapter`** → **`InEngine/Calendar-Google-Adapter`** (old URL redirects).
+- **Disk:** `Modules/Calender-Google-Adapter` → `Modules/Calendar-Google-Adapter`.
+- **Also:** homepage / issue templates / Cursor rules + LTC handoff / PHPStorm roots updated; LTC vendor symlink refreshed.
+- **Next:** GitHub workflow sync from TableUI (if not already committed) + Calendar contracts.
+
 ### 2026-08-05 — Cursor rules + githooks; Calendar adapter alias
 
 - **Status:** Copied TableUI-style **`.githooks`** (Cursor co-author strip) and workspace Cursor **`.cursor/rules`** (attribution, session handoff, PHP standards, issue assignee, `.DS_Store`).
@@ -54,7 +61,6 @@ Issue **#143** (LTC home widgets) is two problems: an **app-facing calendar doma
 
 - **Status:** **In progress** with LTC **`issue-143-calendar-widgets`**.
 - **Package:** Spatie skeleton configured as **`inengine/calendar-google-adapter`** / **`InEngine\CalendarGoogleAdapter`** (PHP **`^8.5`**); requires **`inengine/calendar`: `@dev`**. Still skeleton — no Google client integration yet.
-- **Path note:** directory and GitHub repo use **Calender**; Composer package name uses **calendar-google-adapter**.
 - **Host (LTC):** path/`@dev` via **`composer.local.json`**; PHPStorm roots + VCS mapping on the LTC app module.
 - **Next:** implement provider against Google after **`inengine/calendar`** contracts exist; decide service-account vs OAuth for school shared calendars.
 
