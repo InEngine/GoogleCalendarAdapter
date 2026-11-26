@@ -39,9 +39,21 @@ jobs:
 
     name: P${{ matrix.php }} - L${{ matrix.laravel }} - ${{ matrix.stability }} - ${{ matrix.os }}
 
+    defaults:
+      run:
+        working-directory: GoogleCalendarAdapter
+
     steps:
-      - name: Checkout code
+      - name: Checkout GoogleCalendarAdapter
         uses: actions/checkout@v7
+        with:
+          path: GoogleCalendarAdapter
+
+      - name: Checkout Calendar (public path repository sibling)
+        uses: actions/checkout@v7
+        with:
+          repository: InEngine/Calendar
+          path: Calendar
 
       - name: Setup PHP
         uses: shivammathur/setup-php@v2

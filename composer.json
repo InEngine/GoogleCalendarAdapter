@@ -16,6 +16,15 @@
             "role": "Developer"
         }
     ],
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../Calendar",
+            "options": {
+                "symlink": true
+            }
+        }
+    ],
     "require": {
         "illuminate/contracts": "^11.0||^12.0||^13.0",
         "inengine/calendar": "@dev",
