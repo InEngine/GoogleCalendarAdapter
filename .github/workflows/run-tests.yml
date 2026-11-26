@@ -76,4 +76,5 @@ jobs:
         run: composer show -D
 
       - name: Execute tests
-        run: vendor/bin/pest --ci
+        # local-credentials group needs real Google OAuth secrets; run those locally with pest
+        run: vendor/bin/pest --ci --exclude-group=local-credentials
