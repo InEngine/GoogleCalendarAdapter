@@ -28,7 +28,7 @@ jobs:
       fail-fast: true
       matrix:
         os: [ ubuntu-latest, windows-latest ]
-        php: [ 8.5 ]
+        php: [8.5]
         laravel: [ 13.*, 12.* ]
         stability: [ prefer-lowest, prefer-stable ]
         include:
@@ -39,9 +39,21 @@ jobs:
 
     name: P${{ matrix.php }} - L${{ matrix.laravel }} - ${{ matrix.stability }} - ${{ matrix.os }}
 
+    defaults:
+      run:
+        working-directory: GoogleCalendarAdapter
+
     steps:
-      - name: Checkout code
+      - name: Checkout GoogleCalendarAdapter
         uses: actions/checkout@v7
+        with:
+          path: GoogleCalendarAdapter
+
+      - name: Checkout Calendar (public path repository sibling)
+        uses: actions/checkout@v7
+        with:
+          repository: InEngine/Calendar
+          path: Calendar
 
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
@@ -64,4 +76,5 @@ jobs:
         run: composer show -D
 
       - name: Execute tests
-        run: vendor/bin/pest --ci
+        # local-credentials group needs real Google OAuth secrets; run those locally with pest
+        run: vendor/bin/pest --ci --exclude-group=local-credentials

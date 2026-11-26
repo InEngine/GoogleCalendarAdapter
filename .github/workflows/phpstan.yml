@@ -12,8 +12,20 @@ jobs:
     name: phpstan
     runs-on: ubuntu-latest
     timeout-minutes: 5
+    defaults:
+      run:
+        working-directory: GoogleCalendarAdapter
     steps:
-      - uses: actions/checkout@v7
+      - name: Checkout GoogleCalendarAdapter
+        uses: actions/checkout@v7
+        with:
+          path: GoogleCalendarAdapter
+
+      - name: Checkout Calendar (public path repository sibling)
+        uses: actions/checkout@v7
+        with:
+          repository: InEngine/Calendar
+          path: Calendar
 
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
@@ -23,6 +35,8 @@ jobs:
 
       - name: Install composer dependencies
         uses: ramsey/composer-install@v4
+        with:
+          working-directory: GoogleCalendarAdapter
 
       - name: Run PHPStan
         run: ./vendor/bin/phpstan --error-format=github
