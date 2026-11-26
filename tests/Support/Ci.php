@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace InEngine\GoogleCalendarAdapter\Tests\Support;
+namespace InEngine\CalendarGoogleAdapter\Tests\Support;
 
 final class Ci
 {

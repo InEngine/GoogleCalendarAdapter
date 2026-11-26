@@ -1,7 +1,7 @@
 <?php
 
-use InEngine\GoogleCalendarAdapter\Tests\Support\Ci;
-use InEngine\GoogleCalendarAdapter\Tests\TestCase;
+use InEngine\CalendarGoogleAdapter\Tests\Support\Ci;
+use InEngine\CalendarGoogleAdapter\Tests\TestCase;
 
 uses(TestCase::class)->in(__DIR__);
 
